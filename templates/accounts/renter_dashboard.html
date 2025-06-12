@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagecontent %}
+<section class="dashboard">
+  <nav class="dashboard-nav">
+    <a href="?section=bookings">My Bookings</a>
+    <a href="?section=payments">Payments</a>
+    <a href="?section=parking">Find Parking</a>
+    <a href="?section=support">Support</a>
+    <a href="{% url 'accounts:logout' %}">Log Out</a>
+  </nav>
+
+  <div class="dashboard-content">
+    <h1>Welcome, {{ request.user.username }} (Renter)</h1>
+    <p>This is your dashboard. You can manage your bookings, wallet, and find parking here.</p>
+
+    <div class="dashboard-section">
+      {% if section == 'bookings' %}
+        {% include 'bookings/bookings.html' %}
+      {% elif section == 'payments' %}
+        {% include 'payments/payments.html' %}
+      {% elif section == 'parking' %}
+        {% include 'parking/find.html' %}
+      {% elif section == 'support' %}
+        {% include 'support/support.html' %}
+      {% else %}
+        <p>Select an option from the menu to get started.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}

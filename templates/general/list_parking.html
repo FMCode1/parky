@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagecontent %}
+{% block section1 %}
+<section class="page-section" id="host-sign-up">
+    <h2>Host Sign Up</h2>
+    <p>Ready to list? <a href="/accounts/signup/">Sign up here</a> and choose "Host" as your account type. Once you get verified, you'll gain access to your dashboard where you can manage listings, payments, and bookings.</p>
+</section>
+{% endblock section1 %}
+
+{% block section2 %}
+<section class="page-section" id="how-to-list">
+    <h2>How to List a Spot</h2>
+    <ol class="numbered-list">
+        <li>Create a free host account</li>
+        <li>Enter your parking spot details</li>
+        <li>Set availability, pricing, and upload photos</li>
+        <li>Submit for verification</li>
+    </ol>
+</section>
+{% endblock section2 %}
+
+{% block section3 %}
+<section class="page-section" id="requirements-verification">
+    <h2>Verification Requirements (3 of 4)</h2>
+    <ul class="numbered-list">
+        <li>Government-issued photo ID (required)</li>
+        <li>Live verification photo/video (required)</li>
+        <li>Proof of ownership or authorization to list (e.g. land title, lease) <b>or</b></li>
+        <li>Optional: utility or insurance document for added trust</li>
+    </ul>
+</section>
+{% endblock section3 %}
+
+{% block section4 %}
+<section class="page-section" id="pricing-calculator">
+    <h2>Pricing Tips & Calculator</h2>
+    <p>We recommend pricing competitively based on location and nearby demand. Popular events and downtown zones can command higher rates.</p>
+    <div class="calculator-placeholder">
+        [Pricing calculator coming soon]
+    </div>
+</section>
+{% endblock section4 %}
+
+{% block section5 %}
+<section class="page-section" id="host-faq">
+    <h2>Host FAQ</h2>
+    <div class="faq-item">
+        <button class="faq-question">How do I get paid?</button>
+        <div class="faq-answer">
+            <p>Payouts are processed via Stripe after a successful booking.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question">Can I block off dates?</button>
+        <div class="faq-answer">
+            <p>Yes, you can manage availability anytime from your dashboard.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question">What if someone damages my property?</button>
+        <div class="faq-answer">
+            <p>Parky encourages clear rules and documentation. Contact support for disputes.</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqButtons = document.querySelectorAll('.faq-question');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const answer = button.nextElementSibling;
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+    });
+</script>
+{% endblock section5 %}
+{% endblock pagecontent %}

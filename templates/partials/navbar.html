@@ -1,0 +1,21 @@
+{% load static %}
+
+<nav class="navbar">
+    <div class="nav-left">
+        <a href="/" class="logo-container">
+            <img src="{% static 'images/parky_logo.png' %}" alt="Parky Logo" style="height: 60px;">
+            <span>Parky</span>
+        </a>
+    </div>
+
+    <div class="nav-center">
+        <a href="find_parking">Find Parking</a>
+        <a href="list_parking">List Parking</a>
+        <a href="support">Support</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="/accounts/login_as/">Log In</a>
+        <a href="/accounts/signup_as/">Sign Up</a>
+    </div>
+</nav>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagecontent %}
+{% block section1 %}
+<section class="page-section" id="login-options">
+    <h2>Log In</h2>
+    <p>Select your account type to log in:</p>
+
+    <div class="auth-buttons">
+        <a href="{% url 'accounts:renter_login' %}" class="btn-auth">Renter Login</a>
+        <a href="{% url 'accounts:host_login' %}" class="btn-auth">Host Login</a>
+    </div>
+</section>
+{% endblock section1 %}
+{% endblock pagecontent %}

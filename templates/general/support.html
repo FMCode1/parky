@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagecontent %}
+{% block section1 %}
+<section class="page-section" id="faqs">
+    <h2>FAQs</h2>
+    <ul class="faq-list">
+        <li><strong>What is Parky?</strong> — A platform that connects drivers with available private parking spaces.</li>
+        <li><strong>Is Parky free to use?</strong> — Searching is free. Fees apply when booking or listing a spot.</li>
+        <li><strong>Where is Parky available?</strong> — We're starting in Regina and expanding soon.</li>
+    </ul>
+</section>
+{% endblock section1 %}
+
+{% block section2 %}
+<section class="page-section" id="contact-us">
+    <h2>Contact Us</h2>
+    <p>If you have questions or need help, reach out:</p>
+    <ul class="numbered-list">
+        <li>Email: <a href="mailto:support@parky.ca">support@parky.ca</a></li>
+        <li>Phone: +1 (306) 555-1234</li>
+        <li>Live Chat: Coming Soon</li>
+    </ul>
+</section>
+{% endblock section2 %}
+
+{% block section3 %}
+<section class="page-section" id="community-guidelines">
+    <h2>Community Guidelines</h2>
+    <p>We’re building a respectful, local-first community. All users are expected to:</p>
+    <ul class="numbered-list">
+        <li>Respect property and rules of each listing</li>
+        <li>Communicate clearly and kindly</li>
+        <li>Report misuse or unsafe behavior</li>
+    </ul>
+</section>
+{% endblock section3 %}
+
+{% block section4 %}
+<section class="page-section" id="safety-security">
+    <h2>Safety & Security</h2>
+    <p>We verify users, encrypt data, and monitor for suspicious activity. Your safety is our top priority.</p>
+    <ul class="numbered-list">
+        <li>Verified ID and documents</li>
+        <li>Secure payments through Stripe</li>
+        <li>Dispute resolution and support team</li>
+    </ul>
+</section>
+{% endblock section4 %}
+
+{% block section5 %}
+<section class="page-section" id="terms-of-use">
+    <h2>Terms of Use</h2>
+    <p>By using Parky, you agree to our terms. These outline your responsibilities and our platform policies.</p>
+    <p><a href="{% static 'docs/terms.pdf' %}" target="_blank">Read full Terms of Use (PDF)</a></p>
+</section>
+{% endblock section5 %}
+
+{% block section6 %}
+<section class="page-section" id="privacy-policy">
+    <h2>Privacy Policy</h2>
+    <p>We take privacy seriously. Your data is never sold and only used to operate Parky safely and effectively.</p>
+    <p><a href="{% static 'docs/privacy.pdf' %}" target="_blank">Read full Privacy Policy (PDF)</a></p>
+</section>
+{% endblock section6 %}
+{% endblock pagecontent %}

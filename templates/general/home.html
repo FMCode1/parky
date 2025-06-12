@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Welcome to Parky{% endblock %}
+{% block pagecontent %}
+<div class="home-content">
+    {% block section1 %}
+    <section id="what-is-parky" class="page-section">
+        <h2 class="section-header">What Is Parky?</h2>
+        <p>Parky is a platform that lets homeowners/landowners rent out their unused parking spaces to drivers looking for affordable and reliable parking. To list a parking spot on Parky, you must be the property owner, land title holder, or a leaseholder with written permission to sublet your assigned parking space.</p>
+        </section>
+    {% endblock section1 %}
+
+    {% block section2 %}
+    <section id="how-it-works" class="page-section">
+        <h2>How It Works</h2>
+        <ol class="numbered-list">
+        <li>Hosts list their spots available for parking.</li>
+        <li>Renters search and book the parking spots.</li>
+        <li>Parky handles the payment and verification.</li>
+        </ol>
+    </section>
+    {% endblock section2 %}
+
+    {% block section3 %}
+    <section id="finding-parking" class="page-section">
+        <h2>Finding Parking</h2>
+        <p>Use our search tool to find available parking spots by location, price, and availability.</p>
+
+        <form class="search-form" action="/search/" method="GET">
+            <input type="text" name="location" placeholder="Enter location (e.g. Regina)" required>
+            
+            <select name="price_range">
+                <option value="">Any Price</option>
+                <option value="0-5">$0–$5</option>
+                <option value="5-10">$5–$10</option>
+                <option value="10+">$10+</option>
+            </select>
+
+            <select name="availability">
+                <option value="">Any Time</option>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+            </select>
+
+            <button type="submit">Search</button>
+        </form>
+    </section>
+    {% endblock section3 %}
+
+    {% block section4 %}
+    <section id="rent-out-parking" class="page-section">
+        <h2>Listing Parking</h2>
+        <p>Don't let your unused parking go to waste. List it on Parky and rent out your parking to start earning. It’s fast, secure, and hassle-free.</p>
+    </section>
+    {% endblock section4 %}
+
+    {% block section5 %}
+    <section id="why-parky" class="page-section">
+        <h2>Why Parky?</h2>
+        <p>With Parky, you're supporting homeowners, reducing city congestion, and making better use of the space we already have. Whether you're looking to save money, find reliable parking, or earn passive income from your unused spot, Parky was built for you. Simple. Secure. Community-powered..</p>
+    </section>
+    {% endblock section5 %}
+</div>
+{% endblock pagecontent %}

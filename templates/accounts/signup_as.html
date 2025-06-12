@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pagecontent %}
+{% block section1 %}
+<section class="page-section" id="signup">
+    <h2>Create an Account</h2>
+    <p>Start by choosing your role and filling out the sign-up form.</p>
+
+    <div class="auth-buttons">
+        <a href="{% url 'accounts:renter_signup' %}" class="btn-auth">Sign Up as a Renter</a>
+        <a href="{% url 'accounts:host_signup' %}" class="btn-auth">Sign Up as a Host</a>
+    </div>
+</section>
+{% endblock section1 %}
+{% endblock pagecontent %}

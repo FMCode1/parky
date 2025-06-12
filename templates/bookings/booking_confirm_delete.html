@@ -1,0 +1,7 @@
+<h3>Confirm Deletion</h3>
+<p>Are you sure you want to delete booking for {{ booking.spot }}?</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Yes, Delete</button>
+  <a href="{% url 'bookings:list' %}">Cancel</a>
+</form>

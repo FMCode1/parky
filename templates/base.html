@@ -1,0 +1,26 @@
+<!-- templates/base.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Parky{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    {% include 'partials/navbar.html' %}
+
+    <!-- Main Page Content -->
+    <main>
+        {% block pagecontent %}
+        
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    {% include 'partials/footer.html' %}
+</body>
+</html>

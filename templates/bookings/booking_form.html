@@ -1,0 +1,10 @@
+{% load static %}
+
+<div class="booking-form-container">
+  <h3>{{ form.instance.pk|yesno:"Edit Booking,New Booking" }}</h3>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+</div>
